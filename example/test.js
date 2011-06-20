@@ -4,6 +4,10 @@ var util  = require("util");
 
 var geoip_obj = geoip('207.97.227.239');
 
+if (geoip_obj.flag_valid == false)
+{
+    util.log('geoip(): ' + geoip_obj.error_string);
+}
 
 util.log('ip           : ' + geoip_obj.ip);
 util.log('country_name : ' + geoip_obj.country_name);
