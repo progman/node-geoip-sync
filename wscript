@@ -16,13 +16,13 @@ def configure(conf):
 
 def build(bld):
   obj = bld.new_task_gen("cxx", "shlib", "node_addon")
-  obj.target = "geoip-sync"
-  obj.source = "src/geoip-sync.cpp"
+  obj.target = "node-geoip-sync"
+  obj.source = "src/node-geoip-sync.cpp"
   obj.uselib = 'GeoIP'
 
 def shutdown():
   if Options.commands['clean']:
-    if exists('geoip-sync.node'): unlink('geoip-sync.node')
+    if exists('node-geoip-sync.node'): unlink('node-geoip-sync.node')
   else:
-    if exists('build/default/geoip-sync.node') and not exists('geoip-sync.node'):
-      symlink('build/default/geoip-sync.node', 'geoip-sync.node')
+    if exists('build/default/node-geoip-sync.node') and not exists('node-geoip-sync.node'):
+      symlink('build/default/node-geoip-sync.node', 'node-geoip-sync.node')

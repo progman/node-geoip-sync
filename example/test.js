@@ -1,4 +1,4 @@
-var geoip = require('geoip-sync').geoip;
+var geoip = require('node-geoip-sync').geoip;
 var util  = require("util");
 
 
