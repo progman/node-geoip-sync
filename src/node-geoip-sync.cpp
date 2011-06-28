@@ -91,7 +91,7 @@ geoip_binding(const v8::Arguments &args)
     GeoIP_delete(gi);
 
 
-    gi = GeoIP_open("/usr/share/GeoIP/GeoLiteCity.dat", GEOIP_INDEX_CACHE);
+    gi = GeoIP_open("/usr/share/GeoIP/GeoIPCity.dat", GEOIP_INDEX_CACHE);
     if (gi == NULL)
     {
 	obj_inject->Set(v8::String::New("error_string"), v8::String::New("Error opening GeoIP database"));
