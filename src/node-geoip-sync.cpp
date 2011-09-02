@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-// 0.0.2
+// 0.0.3
 // Alexey Potehin http://www.gnuplanet.ru/doc/cv
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 // apt-get install geoip-database-contrib libgeoip-dev
@@ -71,7 +71,7 @@ geoip_binding(const v8::Arguments &args)
 
 
     v8::String::AsciiValue b64data(args[0]->ToString());
-    std::string ip_str = std::string(*b64data, b64data.length());
+    std::string ip_str(*b64data, b64data.length());
 
 
     gi = GeoIP_open("/usr/share/GeoIP/GeoIP.dat", GEOIP_STANDARD | GEOIP_MEMORY_CACHE);
