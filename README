@@ -1,6 +1,7 @@
 GeoIP sync function for node.js
 
-1) install GeoIP (apt-get update && apt-get install geoip-database-contrib libgeoip-dev)
+1) install GeoIP
+   (apt-get update && apt-get install geoip-database-contrib libgeoip-dev)
    (may be need add 'non-free contrib' string in /etc/apt/sources.list)
 2) get this module (git clone git://github.com/progman/node-geoip-sync.git)
 3) build this module (node-waf configure build)
